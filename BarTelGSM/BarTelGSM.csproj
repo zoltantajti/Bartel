@@ -95,6 +95,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Boltok.cs" />
+    <Compile Include="KPKI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPKI.Designer.cs">
+      <DependentUpon>KPKI.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,8 +113,42 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Napi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Szerviz_Lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Szerviz_Lista.Designer.cs">
+      <DependentUpon>Szerviz_Lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telefon_eladas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telefon_eladas.Designer.cs">
+      <DependentUpon>Telefon_eladas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telefon_vetel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telefon_vetel.Designer.cs">
+      <DependentUpon>Telefon_vetel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tetel_Elad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tetel_Elad.Designer.cs">
+      <DependentUpon>Tetel_Elad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uj_szerviz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uj_szerviz.Designer.cs">
+      <DependentUpon>Uj_szerviz.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="KPKI.resx">
+      <DependentUpon>KPKI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +165,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Szerviz_Lista.resx">
+      <DependentUpon>Szerviz_Lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telefon_eladas.resx">
+      <DependentUpon>Telefon_eladas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telefon_vetel.resx">
+      <DependentUpon>Telefon_vetel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tetel_Elad.resx">
+      <DependentUpon>Tetel_Elad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uj_szerviz.resx">
+      <DependentUpon>Uj_szerviz.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

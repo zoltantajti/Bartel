@@ -3,6 +3,8 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.IO;
 using System.Windows.Forms;
 
@@ -66,6 +68,40 @@ namespace libsql
                 }
             }
             else return 0;
+        }
+
+        public string[] getNapiTetelEladas(string bolt)
+        {
+            string[] ret = new String[2];
+            string q = "SELECT SUM(ar) as napi, COUNT(id) as db FROM tetel_eladas WHERE bolt='"+bolt+"' AND nap = CURRENT_DATE";
+            if (this.open() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(q, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ret[0] = reader.GetValue(0).ToString();
+                        ret[1] = reader.GetValue(1).ToString();
+                    }
+                };
+            };
+            return ret;
+        }
+
+        public DataTable getDT(string table, string mit = "*", string cond = "")
+        {
+            DataTable ret = new DataTable();
+            string q = "SELECT " + mit + " FROM `" + table + "` " + cond;
+            if (this.open() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(q, conn);
+                cmd.ExecuteNonQuery();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                da.Fill(ret);
+            };
+            return ret;
         }
 
         public string[] get(string table, string mit = "*", string cond = "")
@@ -139,13 +175,9 @@ namespace libsql
                     var count = reader.FieldCount;
                     while (reader.Read())
                     {
-                        string jarat = reader.GetString("planeID");
-                        string ind = reader.GetString("ind");
-                        string erk = reader.GetString("erk");
                         string tipus = reader.GetString("tipus");
-                        string pax = reader.GetString("pax");
-                        string cargo = reader.GetString("cargo");
-                        string row = jarat + ";" + ind + ";" + erk + ";" + tipus + ";" + pax + ";" + cargo;
+                        string terv_elad = reader.GetString("terv_eladasi_ar");
+                        string row = tipus + " - " + terv_elad;
                         ret.Add(row);
                     }
                 }

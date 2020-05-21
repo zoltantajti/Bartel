@@ -15,7 +15,7 @@ namespace BarTelGSM
             cb_bolt.Items.Add(Boltok.Nagybolt);
             cb_bolt.Items.Add(Boltok.Kisbolt);
             cb_bolt.SelectedItem = Boltok.Kisbolt;
-
+            tb_username.Text = Program.name;
         }
 
         private void btn_login_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace BarTelGSM
                 Program.bolt = bolt;
                 Program.name = user;
                 Program.login = true;
-                Program.user = db.get("eladok", "id", "WHERE name='" + user + "' AND jelszo='" + pass + "'");
+                Program.user = db.get("eladok", "*", "WHERE name='" + user + "' AND jelszo='" + pass + "'");
                 DialogResult = DialogResult.OK;
             }
             else

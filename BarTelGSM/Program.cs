@@ -18,9 +18,17 @@ namespace BarTelGSM
         [STAThread]
         static void Main()
         {
+            RunLogin();
+        }
+        public static void Logout()
+        {
+            RunLogin();
+        }
+        static void RunLogin()
+        {
             LoginForm lf = new LoginForm();
             DialogResult login = lf.ShowDialog();
-            if(login == DialogResult.OK)
+            if (login == DialogResult.OK)
             {
                 RunApp();
             }
@@ -31,9 +39,19 @@ namespace BarTelGSM
         }
         static void RunApp()
         {
-            Application.EnableVisualStyles();
+            //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            //Application.Run(new MainForm());
+            MainForm mf = new MainForm();
+            DialogResult prog = mf.ShowDialog();
+            if(prog == DialogResult.Abort)
+            {
+                CloseSystem();
+            }
+            else if(prog == DialogResult.Retry)
+            {
+                Logout();
+            }
         }
         static void CloseSystem()
         {
