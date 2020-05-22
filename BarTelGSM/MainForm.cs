@@ -13,6 +13,7 @@ namespace BarTelGSM
         public MainForm()
         {
             InitializeComponent();
+            this.Text = "Főképernyő | Bar-Tel GSM | " + Program.bolt;
             db = new MySQL();
             napi = new Napi();
             lbl_user.Text = "Szia " + Program.name;
@@ -136,7 +137,7 @@ namespace BarTelGSM
             { //nem készül napi jelentés
 
             }
-            //setClose();
+            setClose();
         }
         private void setOpen(bool btn = false)
         {
@@ -254,13 +255,25 @@ namespace BarTelGSM
 
         private void termékekToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Készül!");
+            
         }
 
         private void napiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Napi_Jelentes nj = new Napi_Jelentes();
             nj.Show();
+        }
+
+        private void újToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Rendelesek_uj ruj = new Rendelesek_uj();
+            ruj.Show();
+        }
+
+        private void listaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Rendelesek r = new Rendelesek();
+            r.Show();
         }
     }
 }

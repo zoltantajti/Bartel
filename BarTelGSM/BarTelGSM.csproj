@@ -131,6 +131,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rendelesek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rendelesek.Designer.cs">
+      <DependentUpon>Rendelesek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rendelesek_uj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rendelesek_uj.Designer.cs">
+      <DependentUpon>Rendelesek_uj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rendeles_adat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rendeles_adat.Designer.cs">
+      <DependentUpon>Rendeles_adat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Szerviz_Lista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +210,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Rendelesek.resx">
+      <DependentUpon>Rendelesek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rendelesek_uj.resx">
+      <DependentUpon>Rendelesek_uj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rendeles_adat.resx">
+      <DependentUpon>Rendeles_adat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Szerviz_Lista.resx">
       <DependentUpon>Szerviz_Lista.cs</DependentUpon>
     </EmbeddedResource>

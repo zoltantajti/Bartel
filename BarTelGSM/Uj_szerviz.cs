@@ -29,7 +29,8 @@ namespace BarTelGSM
 
                 string values = "bolt='" + bolt + "',nap=CURRENT_DATE,tipus='" + tipus + "'," +
                     "hiba='" + hiba + "',pinkod='" + pinkod + "',jelkod='" + jelkod + "'," +
-                    "tulaj='" + tulaj + "',telszam='" + telszam + "',status='Új'";
+                    "tulaj='" + tulaj + "',telszam='" + telszam + "',status='Új'," +
+                    "lastMod=CURRENT_DATE";
                 db.insert("szerviz", values);
             }
             else MessageBox.Show("Hiányzó mezők!");
