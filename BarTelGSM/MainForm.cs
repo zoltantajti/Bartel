@@ -122,7 +122,21 @@ namespace BarTelGSM
         }
         private void btn_close_Click(object sender, EventArgs e)
         {
-            setClose();
+            DialogResult dr = MessageBox.Show(
+                "A nap zárásra kerül!\r\nAkarsz jelentést készíteni?",
+                "Bar-Tel GSM",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+            if(dr == DialogResult.Yes)
+            { //készül a napi jelentés
+
+            }
+            else if(dr == DialogResult.No)
+            { //nem készül napi jelentés
+
+            }
+            //setClose();
         }
         private void setOpen(bool btn = false)
         {
@@ -235,12 +249,18 @@ namespace BarTelGSM
 
         private void összessítőkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Készül!");
+            //MessageBox.Show("Készül!");
         }
 
         private void termékekToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Készül!");
+        }
+
+        private void napiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Napi_Jelentes nj = new Napi_Jelentes();
+            nj.Show();
         }
     }
 }

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarTelGSM", "BarTelGSM\BarT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libsql", "libsql\libsql.csproj", "{83E682AC-876A-4E0D-B487-EA79AD85BEC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeSDK", "OfficeSDK\OfficeSDK.csproj", "{52F939A7-F755-4FC9-A322-5CFCEC835216}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{83E682AC-876A-4E0D-B487-EA79AD85BEC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83E682AC-876A-4E0D-B487-EA79AD85BEC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83E682AC-876A-4E0D-B487-EA79AD85BEC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52F939A7-F755-4FC9-A322-5CFCEC835216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52F939A7-F755-4FC9-A322-5CFCEC835216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52F939A7-F755-4FC9-A322-5CFCEC835216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52F939A7-F755-4FC9-A322-5CFCEC835216}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

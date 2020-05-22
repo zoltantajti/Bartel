@@ -90,6 +90,83 @@ namespace libsql
             return ret;
         }
 
+        public string[] getNapiTelefonVetel(string bolt)
+        {
+            string[] ret = new String[2];
+            string q = "SELECT COUNT(id) as tetel_db, SUM(beszerzesi_ar) as napi_forg FROM telefonok WHERE bolt='"+bolt+"' AND nap = CURRENT_DATE";
+            if (this.open() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(q, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ret[0] = reader.GetValue(0).ToString();
+                        ret[1] = reader.GetValue(1).ToString();
+                    }
+                };
+            };
+            return ret;
+        }
+        public string[] getNapiTelefonElad(string bolt)
+        {
+            string[] ret = new String[2];
+            string q = "SELECT COUNT(id) as tetel_db, SUM(teny_eladasi_ar) as napi_forg FROM telefonok WHERE eladva = 1 AND bolt='" + bolt + "' AND eladas_datum = CURRENT_DATE";
+            if (this.open() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(q, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ret[0] = reader.GetValue(0).ToString();
+                        ret[1] = reader.GetValue(1).ToString();
+                    }
+                };
+            };
+            return ret;
+        }
+        public string[] getNapiSzerviz(string bolt)
+        {
+            string[] ret = new String[2];
+            string q = "SELECT COUNT(id) as tetel_db, SUM(ar) as napi_forg FROM szerviz WHERE status = 'Fizetve' AND bolt='"+bolt+"' AND vissza_nap = CURRENT_DATE";
+            if (this.open() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(q, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ret[0] = reader.GetValue(0).ToString();
+                        ret[1] = reader.GetValue(1).ToString();
+                    }
+                };
+            };
+            return ret;
+        }
+        public string[] getNapiKPKI(string bolt)
+        {
+            string[] ret = new String[2];
+            string q = "SELECT COUNT(id) as tetel_db, SUM(mennyi) as napi_forg FROM kpki WHERE bolt='"+bolt+"' AND nap = CURRENT_DATE";
+            if (this.open() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(q, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ret[0] = reader.GetValue(0).ToString();
+                        ret[1] = reader.GetValue(1).ToString();
+                    }
+                };
+            };
+            return ret;
+        }
+
         public DataTable getDT(string table, string mit = "*", string cond = "")
         {
             DataTable ret = new DataTable();
@@ -200,6 +277,50 @@ namespace libsql
                         string id = reader.GetString("id");
                         string nev = reader.GetString("nev");
                         string row = id + " - " + nev;
+                        ret.Add(row);
+                    }
+                }
+            }
+            return ret;
+        }
+        public List<string> getEladToList(string table, string mit = "*", string cond = "")
+        {
+            List<string> ret = new List<string>();
+            string q = "SELECT " + mit + " FROM `" + table + "` " + cond;
+            if (this.open() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(q, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    var count = reader.FieldCount;
+                    while (reader.Read())
+                    {
+                        string tetel = reader.GetString("tetel");
+                        string ar = reader.GetString("ar");
+                        string row = tetel + ";" + ar;
+                        ret.Add(row);
+                    }
+                }
+            }
+            return ret;
+        }
+        public List<string> getTelVetelToList(string table, string mit = "*", string cond = "")
+        {
+            List<string> ret = new List<string>();
+            string q = "SELECT " + mit + " FROM `" + table + "` " + cond;
+            if (this.open() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(q, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    var count = reader.FieldCount;
+                    while (reader.Read())
+                    {
+                        string tetel = reader.GetString("tipus");
+                        string ar = reader.GetString("beszerzesi_ar");
+                        string row = tetel + ";" + ar;
                         ret.Add(row);
                     }
                 }
