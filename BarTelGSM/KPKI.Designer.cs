@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KPKI));
             this.label1 = new System.Windows.Forms.Label();
             this.tb_ki = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -121,6 +122,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tb_ki);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "KPKI";
             this.Text = "KPKI";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_kpki)).EndInit();

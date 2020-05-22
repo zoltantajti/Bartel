@@ -30,8 +30,32 @@ namespace BarTelGSM
             {
                 setOpen();
                 collectFromData();
+            };
+            applyPermission();
+        }
+        private void applyPermission()
+        {
+            if(this.rank == 1)
+            { //Eladó permission
+                összessítőkToolStripMenuItem.Visible = false;
+                beallitasokToolStripMenuItem.Visible = false;
+            }
+            else if(this.rank == 2)
+            { //Tulaj permission
+                összessítőkToolStripMenuItem.Visible = true;
+                beallitasokToolStripMenuItem.Visible = true;
+                felhasználókToolStripMenuItem.Visible = true;
+                boltokToolStripMenuItem.Visible = false;
+            }
+            else if(this.rank == 3)
+            { //Rendszergazda permission
+                összessítőkToolStripMenuItem.Visible = true;
+                beallitasokToolStripMenuItem.Visible = true;
+                felhasználókToolStripMenuItem.Visible = true;
+                boltokToolStripMenuItem.Visible = true;
             }
         }
+        
         private void MainForm_Shown(object sender, EventArgs e)
         {
             if(napi.checkNapi() == true)
@@ -196,6 +220,27 @@ namespace BarTelGSM
         {
             Szerviz_Lista szl = new Szerviz_Lista(napi, this);
             szl.Show();
+        }
+
+        private void felhasználókToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Felhasznalok f = new Felhasznalok();
+            f.Show();
+        }
+
+        private void boltokToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("készül!");
+        }
+
+        private void összessítőkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Készül!");
+        }
+
+        private void termékekToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Készül!");
         }
     }
 }

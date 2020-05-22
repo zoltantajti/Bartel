@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.ms_menu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kijelentkezésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +45,7 @@
             this.szervízListaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.termékekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.összessítőkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.beallitasokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ss_lablec = new System.Windows.Forms.StatusStrip();
             this.lbl_user = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_bolt = new System.Windows.Forms.ToolStripStatusLabel();
@@ -73,6 +75,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tb_nyitokassza = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.felhasználókToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.boltokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ms_menu.SuspendLayout();
             this.ss_lablec.SuspendLayout();
             this.gb_napiAdatok.SuspendLayout();
@@ -87,10 +91,11 @@
             this.kPKIToolStripMenuItem,
             this.szervizToolStripMenuItem,
             this.termékekToolStripMenuItem,
-            this.összessítőkToolStripMenuItem});
+            this.összessítőkToolStripMenuItem,
+            this.beallitasokToolStripMenuItem});
             this.ms_menu.Location = new System.Drawing.Point(0, 0);
             this.ms_menu.Name = "ms_menu";
-            this.ms_menu.Size = new System.Drawing.Size(429, 24);
+            this.ms_menu.Size = new System.Drawing.Size(451, 24);
             this.ms_menu.TabIndex = 0;
             this.ms_menu.Text = "menuStrip1";
             // 
@@ -190,12 +195,23 @@
             this.termékekToolStripMenuItem.Name = "termékekToolStripMenuItem";
             this.termékekToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.termékekToolStripMenuItem.Text = "Termékek";
+            this.termékekToolStripMenuItem.Click += new System.EventHandler(this.termékekToolStripMenuItem_Click);
             // 
             // összessítőkToolStripMenuItem
             // 
             this.összessítőkToolStripMenuItem.Name = "összessítőkToolStripMenuItem";
             this.összessítőkToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.összessítőkToolStripMenuItem.Text = "Összessítők";
+            this.összessítőkToolStripMenuItem.Click += new System.EventHandler(this.összessítőkToolStripMenuItem_Click);
+            // 
+            // beallitasokToolStripMenuItem
+            // 
+            this.beallitasokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.felhasználókToolStripMenuItem,
+            this.boltokToolStripMenuItem});
+            this.beallitasokToolStripMenuItem.Name = "beallitasokToolStripMenuItem";
+            this.beallitasokToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.beallitasokToolStripMenuItem.Text = "Beállítások";
             // 
             // ss_lablec
             // 
@@ -205,7 +221,7 @@
             this.lbl_ido});
             this.ss_lablec.Location = new System.Drawing.Point(0, 189);
             this.ss_lablec.Name = "ss_lablec";
-            this.ss_lablec.Size = new System.Drawing.Size(429, 22);
+            this.ss_lablec.Size = new System.Drawing.Size(451, 22);
             this.ss_lablec.SizingGrip = false;
             this.ss_lablec.TabIndex = 1;
             this.ss_lablec.Text = "statusStrip1";
@@ -276,7 +292,7 @@
             this.gb_napiAdatok.Controls.Add(this.label2);
             this.gb_napiAdatok.Location = new System.Drawing.Point(13, 57);
             this.gb_napiAdatok.Name = "gb_napiAdatok";
-            this.gb_napiAdatok.Size = new System.Drawing.Size(404, 128);
+            this.gb_napiAdatok.Size = new System.Drawing.Size(426, 128);
             this.gb_napiAdatok.TabIndex = 4;
             this.gb_napiAdatok.TabStop = false;
             this.gb_napiAdatok.Text = "Napi adatok";
@@ -468,11 +484,25 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Nyitó kassza:";
             // 
+            // felhasználókToolStripMenuItem
+            // 
+            this.felhasználókToolStripMenuItem.Name = "felhasználókToolStripMenuItem";
+            this.felhasználókToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.felhasználókToolStripMenuItem.Text = "Felhasználók";
+            this.felhasználókToolStripMenuItem.Click += new System.EventHandler(this.felhasználókToolStripMenuItem_Click);
+            // 
+            // boltokToolStripMenuItem
+            // 
+            this.boltokToolStripMenuItem.Name = "boltokToolStripMenuItem";
+            this.boltokToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.boltokToolStripMenuItem.Text = "Boltok";
+            this.boltokToolStripMenuItem.Click += new System.EventHandler(this.boltokToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 211);
+            this.ClientSize = new System.Drawing.Size(451, 211);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_nyitokassza);
             this.Controls.Add(this.gb_napiAdatok);
@@ -481,6 +511,7 @@
             this.Controls.Add(this.ss_lablec);
             this.Controls.Add(this.ms_menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
@@ -544,6 +575,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_nyito_kassza;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolStripMenuItem beallitasokToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem felhasználókToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem boltokToolStripMenuItem;
     }
 }
 

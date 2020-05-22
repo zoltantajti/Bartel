@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Szerviz_megtekint));
             this.btn_modify = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_tipus = new System.Windows.Forms.Label();
-            this.lbl_hiba = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbl_pin = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lbl_jelkod = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.lbl_tulaj = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.lbl_jelkod = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_pin = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_hiba = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_tipus = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cb_status = new System.Windows.Forms.ComboBox();
             this.gb_szervizdij = new System.Windows.Forms.GroupBox();
@@ -92,59 +93,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Szervíz adatok";
             // 
-            // label1
+            // lbl_tulaj
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Típus:";
+            this.lbl_tulaj.AutoSize = true;
+            this.lbl_tulaj.Location = new System.Drawing.Point(77, 58);
+            this.lbl_tulaj.Name = "lbl_tulaj";
+            this.lbl_tulaj.Size = new System.Drawing.Size(86, 13);
+            this.lbl_tulaj.TabIndex = 9;
+            this.lbl_tulaj.Text = "{tulaj} ({telszam})";
             // 
-            // lbl_tipus
+            // label6
             // 
-            this.lbl_tipus.AutoSize = true;
-            this.lbl_tipus.Location = new System.Drawing.Point(53, 16);
-            this.lbl_tipus.Name = "lbl_tipus";
-            this.lbl_tipus.Size = new System.Drawing.Size(37, 13);
-            this.lbl_tipus.TabIndex = 1;
-            this.lbl_tipus.Text = "{tipus}";
-            // 
-            // lbl_hiba
-            // 
-            this.lbl_hiba.AutoSize = true;
-            this.lbl_hiba.Location = new System.Drawing.Point(53, 38);
-            this.lbl_hiba.Name = "lbl_hiba";
-            this.lbl_hiba.Size = new System.Drawing.Size(35, 13);
-            this.lbl_hiba.TabIndex = 3;
-            this.lbl_hiba.Text = "{hiba}";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Hiba:";
-            // 
-            // lbl_pin
-            // 
-            this.lbl_pin.AutoSize = true;
-            this.lbl_pin.Location = new System.Drawing.Point(190, 16);
-            this.lbl_pin.Name = "lbl_pin";
-            this.lbl_pin.Size = new System.Drawing.Size(29, 13);
-            this.lbl_pin.TabIndex = 5;
-            this.lbl_pin.Text = "{pin}";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(146, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "PIN:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 58);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Tulajdonos:";
             // 
             // lbl_jelkod
             // 
@@ -164,23 +129,59 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Jelkód:";
             // 
-            // lbl_tulaj
+            // lbl_pin
             // 
-            this.lbl_tulaj.AutoSize = true;
-            this.lbl_tulaj.Location = new System.Drawing.Point(77, 58);
-            this.lbl_tulaj.Name = "lbl_tulaj";
-            this.lbl_tulaj.Size = new System.Drawing.Size(86, 13);
-            this.lbl_tulaj.TabIndex = 9;
-            this.lbl_tulaj.Text = "{tulaj} ({telszam})";
+            this.lbl_pin.AutoSize = true;
+            this.lbl_pin.Location = new System.Drawing.Point(190, 16);
+            this.lbl_pin.Name = "lbl_pin";
+            this.lbl_pin.Size = new System.Drawing.Size(29, 13);
+            this.lbl_pin.TabIndex = 5;
+            this.lbl_pin.Text = "{pin}";
             // 
-            // label6
+            // label4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 58);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Tulajdonos:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(146, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "PIN:";
+            // 
+            // lbl_hiba
+            // 
+            this.lbl_hiba.AutoSize = true;
+            this.lbl_hiba.Location = new System.Drawing.Point(53, 38);
+            this.lbl_hiba.Name = "lbl_hiba";
+            this.lbl_hiba.Size = new System.Drawing.Size(35, 13);
+            this.lbl_hiba.TabIndex = 3;
+            this.lbl_hiba.Text = "{hiba}";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Hiba:";
+            // 
+            // lbl_tipus
+            // 
+            this.lbl_tipus.AutoSize = true;
+            this.lbl_tipus.Location = new System.Drawing.Point(53, 16);
+            this.lbl_tipus.Name = "lbl_tipus";
+            this.lbl_tipus.Size = new System.Drawing.Size(37, 13);
+            this.lbl_tipus.TabIndex = 1;
+            this.lbl_tipus.Text = "{tipus}";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Típus:";
             // 
             // groupBox2
             // 
@@ -248,6 +249,7 @@
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_modify);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Szerviz_megtekint";

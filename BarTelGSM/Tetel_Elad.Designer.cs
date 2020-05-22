@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tetel_Elad));
             this.label1 = new System.Windows.Forms.Label();
             this.tb_tetelnev = new System.Windows.Forms.TextBox();
             this.tb_tetelar = new System.Windows.Forms.TextBox();
@@ -121,6 +122,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tb_tetelnev);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Tetel_Elad";
             this.Text = "Tétel eladás | Bar-Tel GSM";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_napiElad)).EndInit();

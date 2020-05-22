@@ -184,5 +184,27 @@ namespace libsql
             }
             return ret;
         }
+        public List<string> getRanks(string table, string mit = "*", string cond = "")
+        {
+            List<string> ret = new List<string>();
+            string q = "SELECT " + mit + " FROM `" + table + "` " + cond;
+            if (this.open() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(q, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    var count = reader.FieldCount;
+                    while (reader.Read())
+                    {
+                        string id = reader.GetString("id");
+                        string nev = reader.GetString("nev");
+                        string row = id + " - " + nev;
+                        ret.Add(row);
+                    }
+                }
+            }
+            return ret;
+        }
     }
 }

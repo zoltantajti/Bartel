@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Telefon_vetel));
             this.label1 = new System.Windows.Forms.Label();
             this.tb_tipus = new System.Windows.Forms.TextBox();
             this.tb_besz_ar = new System.Windows.Forms.TextBox();
@@ -116,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 231);
+            this.ClientSize = new System.Drawing.Size(361, 131);
             this.Controls.Add(this.lbl_status);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.tb_terv_elad_ar);
@@ -125,6 +126,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tb_tipus);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Telefon_vetel";
             this.Text = "Telefon_vetel";
             this.ResumeLayout(false);
