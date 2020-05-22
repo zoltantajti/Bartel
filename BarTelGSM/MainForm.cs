@@ -92,7 +92,7 @@ namespace BarTelGSM
             {
                 int nyito = int.Parse(tb_nyitokassza.Text);
                 napi.nyito_kassza = nyito;
-                setOpen();
+                setOpen(true);
             }
             else MessageBox.Show("Adj meg nyitó kasszát!");
         }
@@ -100,8 +100,7 @@ namespace BarTelGSM
         {
             setClose();
         }
-
-        private void setOpen()
+        private void setOpen(bool btn = false)
         {
             eladásToolStripMenuItem.Enabled = true;
             vételToolStripMenuItem.Enabled = true;
@@ -114,8 +113,15 @@ namespace BarTelGSM
             btn_close.Enabled = true;
             btn_open.Enabled = false;
             lbl_nyito_kassza.Text = tb_nyitokassza.Text;
-            db.update("boltok", "nyitva='1'", "WHERE nev='" + Program.bolt + "'");
+            if (btn == true)
+            {
+                napi.nyito_kassza = int.Parse(tb_nyitokassza.Text);
+                napi.kassza = int.Parse(tb_nyitokassza.Text);
+                db.update("boltok", "nyitva='1'", "WHERE nev='" + Program.bolt + "'");
+                napi.napiFrissit();
+            };
             statFrissit();
+            
         }
         private void setClose()
         {
@@ -146,6 +152,7 @@ namespace BarTelGSM
             lbl_kpki_ft.Text = napi.kpki.ToString();
             lbl_nyito_kassza.Text = napi.nyito_kassza.ToString();
             lbl_kassza_ft.Text = napi.kassza.ToString();
+            
         }
         private void szamol()
         {

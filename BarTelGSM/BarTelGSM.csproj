@@ -122,6 +122,12 @@
     <Compile Include="Szerviz_Lista.Designer.cs">
       <DependentUpon>Szerviz_Lista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Szerviz_megtekint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Szerviz_megtekint.Designer.cs">
+      <DependentUpon>Szerviz_megtekint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telefon_eladas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </Compile>
     <EmbeddedResource Include="Szerviz_Lista.resx">
       <DependentUpon>Szerviz_Lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Szerviz_megtekint.resx">
+      <DependentUpon>Szerviz_megtekint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telefon_eladas.resx">
       <DependentUpon>Telefon_eladas.cs</DependentUpon>

@@ -39,11 +39,11 @@
             this.vételToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.telefonVételToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kPKIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.termékekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.összessítőkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.szervizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.újSzervízToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.szervízListaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.termékekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.összessítőkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ss_lablec = new System.Windows.Forms.StatusStrip();
             this.lbl_user = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_bolt = new System.Windows.Forms.ToolStripStatusLabel();
@@ -52,6 +52,8 @@
             this.btn_open = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
             this.gb_napiAdatok = new System.Windows.Forms.GroupBox();
+            this.lbl_nyito_kassza = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.lbl_kassza_ft = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_kpki_ft = new System.Windows.Forms.Label();
@@ -71,8 +73,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tb_nyitokassza = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbl_nyito_kassza = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.ms_menu.SuspendLayout();
             this.ss_lablec.SuspendLayout();
             this.gb_napiAdatok.SuspendLayout();
@@ -136,7 +136,7 @@
             // telefonEladásToolStripMenuItem
             // 
             this.telefonEladásToolStripMenuItem.Name = "telefonEladásToolStripMenuItem";
-            this.telefonEladásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.telefonEladásToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.telefonEladásToolStripMenuItem.Text = "Telefon eladás";
             this.telefonEladásToolStripMenuItem.Click += new System.EventHandler(this.telefonEladásToolStripMenuItem_Click);
             // 
@@ -151,7 +151,7 @@
             // telefonVételToolStripMenuItem
             // 
             this.telefonVételToolStripMenuItem.Name = "telefonVételToolStripMenuItem";
-            this.telefonVételToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.telefonVételToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.telefonVételToolStripMenuItem.Text = "Telefon vétel";
             this.telefonVételToolStripMenuItem.Click += new System.EventHandler(this.telefonVételToolStripMenuItem_Click);
             // 
@@ -161,18 +161,6 @@
             this.kPKIToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.kPKIToolStripMenuItem.Text = "KP KI";
             this.kPKIToolStripMenuItem.Click += new System.EventHandler(this.kPKIToolStripMenuItem_Click);
-            // 
-            // termékekToolStripMenuItem
-            // 
-            this.termékekToolStripMenuItem.Name = "termékekToolStripMenuItem";
-            this.termékekToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.termékekToolStripMenuItem.Text = "Termékek";
-            // 
-            // összessítőkToolStripMenuItem
-            // 
-            this.összessítőkToolStripMenuItem.Name = "összessítőkToolStripMenuItem";
-            this.összessítőkToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.összessítőkToolStripMenuItem.Text = "Összessítők";
             // 
             // szervizToolStripMenuItem
             // 
@@ -186,16 +174,28 @@
             // újSzervízToolStripMenuItem
             // 
             this.újSzervízToolStripMenuItem.Name = "újSzervízToolStripMenuItem";
-            this.újSzervízToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.újSzervízToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.újSzervízToolStripMenuItem.Text = "Új szervíz";
             this.újSzervízToolStripMenuItem.Click += new System.EventHandler(this.újSzervízToolStripMenuItem_Click);
             // 
             // szervízListaToolStripMenuItem
             // 
             this.szervízListaToolStripMenuItem.Name = "szervízListaToolStripMenuItem";
-            this.szervízListaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.szervízListaToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.szervízListaToolStripMenuItem.Text = "Szervíz lista";
             this.szervízListaToolStripMenuItem.Click += new System.EventHandler(this.szervízListaToolStripMenuItem_Click);
+            // 
+            // termékekToolStripMenuItem
+            // 
+            this.termékekToolStripMenuItem.Name = "termékekToolStripMenuItem";
+            this.termékekToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.termékekToolStripMenuItem.Text = "Termékek";
+            // 
+            // összessítőkToolStripMenuItem
+            // 
+            this.összessítőkToolStripMenuItem.Name = "összessítőkToolStripMenuItem";
+            this.összessítőkToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.összessítőkToolStripMenuItem.Text = "Összessítők";
             // 
             // ss_lablec
             // 
@@ -206,6 +206,7 @@
             this.ss_lablec.Location = new System.Drawing.Point(0, 189);
             this.ss_lablec.Name = "ss_lablec";
             this.ss_lablec.Size = new System.Drawing.Size(429, 22);
+            this.ss_lablec.SizingGrip = false;
             this.ss_lablec.TabIndex = 1;
             this.ss_lablec.Text = "statusStrip1";
             // 
@@ -279,6 +280,24 @@
             this.gb_napiAdatok.TabIndex = 4;
             this.gb_napiAdatok.TabStop = false;
             this.gb_napiAdatok.Text = "Napi adatok";
+            // 
+            // lbl_nyito_kassza
+            // 
+            this.lbl_nyito_kassza.AutoSize = true;
+            this.lbl_nyito_kassza.Location = new System.Drawing.Point(345, 20);
+            this.lbl_nyito_kassza.Name = "lbl_nyito_kassza";
+            this.lbl_nyito_kassza.Size = new System.Drawing.Size(24, 13);
+            this.lbl_nyito_kassza.TabIndex = 18;
+            this.lbl_nyito_kassza.Text = "{Ft}";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(253, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Nyitó kassza:";
             // 
             // lbl_kassza_ft
             // 
@@ -448,24 +467,6 @@
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Nyitó kassza:";
-            // 
-            // lbl_nyito_kassza
-            // 
-            this.lbl_nyito_kassza.AutoSize = true;
-            this.lbl_nyito_kassza.Location = new System.Drawing.Point(345, 20);
-            this.lbl_nyito_kassza.Name = "lbl_nyito_kassza";
-            this.lbl_nyito_kassza.Size = new System.Drawing.Size(24, 13);
-            this.lbl_nyito_kassza.TabIndex = 18;
-            this.lbl_nyito_kassza.Text = "{Ft}";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(253, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 13);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Nyitó kassza:";
             // 
             // MainForm
             // 

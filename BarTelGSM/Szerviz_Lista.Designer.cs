@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_szervizek = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.tb_nev = new System.Windows.Forms.TextBox();
             this.tb_tipus = new System.Windows.Forms.TextBox();
@@ -37,16 +37,30 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
             this.btn_showAll = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_szervizek)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_szervizek
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 60);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(741, 232);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_szervizek.AllowUserToAddRows = false;
+            this.dgv_szervizek.AllowUserToDeleteRows = false;
+            this.dgv_szervizek.AllowUserToResizeColumns = false;
+            this.dgv_szervizek.AllowUserToResizeRows = false;
+            this.dgv_szervizek.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_szervizek.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_szervizek.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgv_szervizek.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.dgv_szervizek.Location = new System.Drawing.Point(0, 55);
+            this.dgv_szervizek.MultiSelect = false;
+            this.dgv_szervizek.Name = "dgv_szervizek";
+            this.dgv_szervizek.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_szervizek.ShowCellErrors = false;
+            this.dgv_szervizek.ShowCellToolTips = false;
+            this.dgv_szervizek.ShowEditingIcon = false;
+            this.dgv_szervizek.ShowRowErrors = false;
+            this.dgv_szervizek.Size = new System.Drawing.Size(736, 232);
+            this.dgv_szervizek.TabIndex = 0;
+            this.dgv_szervizek.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_szervizek_CellContentDoubleClick);
             // 
             // label1
             // 
@@ -104,6 +118,7 @@
             this.btn_search.TabIndex = 7;
             this.btn_search.Text = "Keresés";
             this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // btn_showAll
             // 
@@ -113,6 +128,7 @@
             this.btn_showAll.TabIndex = 8;
             this.btn_showAll.Text = "Mindet mutat";
             this.btn_showAll.UseVisualStyleBackColor = true;
+            this.btn_showAll.Click += new System.EventHandler(this.btn_showAll_Click);
             // 
             // Szerviz_Lista
             // 
@@ -127,10 +143,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tb_nev);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_szervizek);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Szerviz_Lista";
             this.Text = "Szerviz_Lista";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_szervizek)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,7 +157,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_szervizek;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tb_nev;
         private System.Windows.Forms.TextBox tb_tipus;

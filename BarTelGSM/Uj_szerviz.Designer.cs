@@ -179,6 +179,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tb_tipus);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Uj_szerviz";
             this.Text = "Uj_szerviz";
             this.ResumeLayout(false);
