@@ -47,6 +47,8 @@ namespace BarTelGSM
                 beallitasokToolStripMenuItem.Visible = true;
                 felhasználókToolStripMenuItem.Visible = true;
                 boltokToolStripMenuItem.Visible = false;
+                /*TulajForm tf = new TulajForm();
+                tf.Show();*/
             }
             else if(this.rank == 3)
             { //Rendszergazda permission
@@ -54,6 +56,8 @@ namespace BarTelGSM
                 beallitasokToolStripMenuItem.Visible = true;
                 felhasználókToolStripMenuItem.Visible = true;
                 boltokToolStripMenuItem.Visible = true;
+                /*TulajForm tf = new TulajForm();
+                tf.Show();*/
             }
         }
         
@@ -203,7 +207,7 @@ namespace BarTelGSM
 
         private void tételEladásToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tetel_Elad te = new Tetel_Elad(napi,this);
+            Tetel_Elad te = new Tetel_Elad(napi,this,false);
             te.Show();
         }
 
@@ -260,8 +264,10 @@ namespace BarTelGSM
 
         private void napiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Napi_Jelentes nj = new Napi_Jelentes();
-            nj.Show();
+            /*Napi_Jelentes nj = new Napi_Jelentes();
+            nj.Show();*/
+            TulajForm tf = new TulajForm();
+            tf.Show();
         }
 
         private void újToolStripMenuItem_Click(object sender, EventArgs e)
@@ -274,6 +280,24 @@ namespace BarTelGSM
         {
             Rendelesek r = new Rendelesek();
             r.Show();
+        }
+
+        private void bevételezésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Keszlet_bevetelezes kbv = new Keszlet_bevetelezes();
+            kbv.Show();
+        }
+
+        private void selejtezésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Keszlet_Selejt ks = new Keszlet_Selejt(false);
+            ks.Show();
+        }
+
+        private void készletlistaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Keszlet_Lista kl = new Keszlet_Lista(napi, this);
+            kl.Show();
         }
     }
 }

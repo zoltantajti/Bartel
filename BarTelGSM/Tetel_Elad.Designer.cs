@@ -38,6 +38,9 @@
             this.timer_kiir = new System.Windows.Forms.Timer(this.components);
             this.lbl_status = new System.Windows.Forms.Label();
             this.dgv_napiElad = new System.Windows.Forms.DataGridView();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.tb_vonalkod = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_napiElad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +62,7 @@
             // 
             // tb_tetelar
             // 
-            this.tb_tetelar.Location = new System.Drawing.Point(80, 36);
+            this.tb_tetelar.Location = new System.Drawing.Point(80, 62);
             this.tb_tetelar.Name = "tb_tetelar";
             this.tb_tetelar.Size = new System.Drawing.Size(198, 20);
             this.tb_tetelar.TabIndex = 3;
@@ -67,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 39);
+            this.label2.Location = new System.Drawing.Point(13, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 2;
@@ -75,7 +78,7 @@
             // 
             // btn_elad
             // 
-            this.btn_elad.Location = new System.Drawing.Point(284, 9);
+            this.btn_elad.Location = new System.Drawing.Point(436, 7);
             this.btn_elad.Name = "btn_elad";
             this.btn_elad.Size = new System.Drawing.Size(75, 23);
             this.btn_elad.TabIndex = 4;
@@ -91,7 +94,7 @@
             // lbl_status
             // 
             this.lbl_status.AutoSize = true;
-            this.lbl_status.Location = new System.Drawing.Point(285, 42);
+            this.lbl_status.Location = new System.Drawing.Point(433, 43);
             this.lbl_status.Name = "lbl_status";
             this.lbl_status.Size = new System.Drawing.Size(84, 13);
             this.lbl_status.TabIndex = 5;
@@ -105,16 +108,45 @@
             this.dgv_napiElad.AllowUserToResizeRows = false;
             this.dgv_napiElad.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_napiElad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_napiElad.Location = new System.Drawing.Point(16, 70);
+            this.dgv_napiElad.Location = new System.Drawing.Point(12, 88);
             this.dgv_napiElad.Name = "dgv_napiElad";
-            this.dgv_napiElad.Size = new System.Drawing.Size(495, 222);
+            this.dgv_napiElad.Size = new System.Drawing.Size(495, 255);
             this.dgv_napiElad.TabIndex = 6;
+            // 
+            // btn_search
+            // 
+            this.btn_search.Location = new System.Drawing.Point(284, 8);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(75, 23);
+            this.btn_search.TabIndex = 7;
+            this.btn_search.Text = "Keresés";
+            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // tb_vonalkod
+            // 
+            this.tb_vonalkod.Location = new System.Drawing.Point(80, 36);
+            this.tb_vonalkod.Name = "tb_vonalkod";
+            this.tb_vonalkod.Size = new System.Drawing.Size(198, 20);
+            this.tb_vonalkod.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 39);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Vonalkód:";
             // 
             // Tetel_Elad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 304);
+            this.ClientSize = new System.Drawing.Size(523, 355);
+            this.Controls.Add(this.tb_vonalkod);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btn_search);
             this.Controls.Add(this.dgv_napiElad);
             this.Controls.Add(this.lbl_status);
             this.Controls.Add(this.btn_elad);
@@ -137,12 +169,15 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tb_tetelnev;
-        private System.Windows.Forms.TextBox tb_tetelar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_elad;
         private System.Windows.Forms.Timer timer_kiir;
         private System.Windows.Forms.Label lbl_status;
         private System.Windows.Forms.DataGridView dgv_napiElad;
+        private System.Windows.Forms.Button btn_search;
+        public System.Windows.Forms.TextBox tb_tetelnev;
+        public System.Windows.Forms.TextBox tb_tetelar;
+        public System.Windows.Forms.TextBox tb_vonalkod;
+        private System.Windows.Forms.Label label3;
     }
 }

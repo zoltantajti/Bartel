@@ -104,6 +104,36 @@
     <Compile Include="Felhasznalok.Designer.cs">
       <DependentUpon>Felhasznalok.cs</DependentUpon>
     </Compile>
+    <Compile Include="Keszlet_bevetelezes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet_bevetelezes.Designer.cs">
+      <DependentUpon>Keszlet_bevetelezes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keszlet_keres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet_keres.Designer.cs">
+      <DependentUpon>Keszlet_keres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keszlet_Lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet_Lista.Designer.cs">
+      <DependentUpon>Keszlet_Lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keszlet_Selejt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet_Selejt.Designer.cs">
+      <DependentUpon>Keszlet_Selejt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keszlet_Transzfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet_Transzfer.Designer.cs">
+      <DependentUpon>Keszlet_Transzfer.cs</DependentUpon>
+    </Compile>
     <Compile Include="KPKI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,11 +203,23 @@
     <Compile Include="Telefon_vetel.Designer.cs">
       <DependentUpon>Telefon_vetel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Termek_arvaltozas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Termek_arvaltozas.Designer.cs">
+      <DependentUpon>Termek_arvaltozas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tetel_Elad.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tetel_Elad.Designer.cs">
       <DependentUpon>Tetel_Elad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TulajForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TulajForm.Designer.cs">
+      <DependentUpon>TulajForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Uj_szerviz.cs">
       <SubType>Form</SubType>
@@ -187,6 +229,21 @@
     </Compile>
     <EmbeddedResource Include="Felhasznalok.resx">
       <DependentUpon>Felhasznalok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet_bevetelezes.resx">
+      <DependentUpon>Keszlet_bevetelezes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet_keres.resx">
+      <DependentUpon>Keszlet_keres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet_Lista.resx">
+      <DependentUpon>Keszlet_Lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet_Selejt.resx">
+      <DependentUpon>Keszlet_Selejt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet_Transzfer.resx">
+      <DependentUpon>Keszlet_Transzfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KPKI.resx">
       <DependentUpon>KPKI.cs</DependentUpon>
@@ -231,8 +288,14 @@
     <EmbeddedResource Include="Telefon_vetel.resx">
       <DependentUpon>Telefon_vetel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Termek_arvaltozas.resx">
+      <DependentUpon>Termek_arvaltozas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tetel_Elad.resx">
       <DependentUpon>Tetel_Elad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TulajForm.resx">
+      <DependentUpon>TulajForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uj_szerviz.resx">
       <DependentUpon>Uj_szerviz.cs</DependentUpon>

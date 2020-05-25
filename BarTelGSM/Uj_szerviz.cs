@@ -32,6 +32,13 @@ namespace BarTelGSM
                     "tulaj='" + tulaj + "',telszam='" + telszam + "',status='Új'," +
                     "lastMod=CURRENT_DATE";
                 db.insert("szerviz", values);
+                MessageBox.Show("A szervíz rögzítve!");
+                tb_tipus.Text = "";
+                tb_hiba.Text = "";
+                tb_pin.Text = "";
+                tb_jelkod.Text = "";
+                tb_tulaj.Text = "";
+                tb_telszam.Text = "";
             }
             else MessageBox.Show("Hiányzó mezők!");
         }
