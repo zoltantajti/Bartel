@@ -64,11 +64,15 @@ namespace BarTelGSM
 
         private void keszletFrissit(string nev, string ean)
         {
-            string[] res = db.get("termekek", "dbszam", "WHERE bolt='" + Program.bolt + "' AND nev='" + nev + "' AND vonalkod='" + ean + "'");
-            int darab = int.Parse(res[0]) - 1;
-            string values = "dbszam='" + darab + "'";
-            string cond = "WHERE bolt='" + Program.bolt + "' AND nev='" + nev + "' AND vonalkod='" + ean + "'";
-            db.update("termekek", values, cond);
+            try
+            {
+                string[] res = db.get("termekek", "dbszam", "WHERE bolt='" + Program.bolt + "' AND nev='" + nev + "' AND vonalkod='" + ean + "'");
+                int darab = int.Parse(res[0]) - 1;
+                string values = "dbszam='" + darab + "'";
+                string cond = "WHERE bolt='" + Program.bolt + "' AND nev='" + nev + "' AND vonalkod='" + ean + "'";
+                db.update("termekek", values, cond);
+            }
+            catch (Exception e) { };
         }
 
         private void timer_kiir_Tick(object sender, EventArgs e)
