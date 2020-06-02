@@ -179,6 +179,12 @@
     <Compile Include="Rendeles_adat.Designer.cs">
       <DependentUpon>Rendeles_adat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Szerviz_helyben.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Szerviz_helyben.Designer.cs">
+      <DependentUpon>Szerviz_helyben.cs</DependentUpon>
+    </Compile>
     <Compile Include="Szerviz_Lista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,12 @@
     </Compile>
     <Compile Include="Tetel_Elad.Designer.cs">
       <DependentUpon>Tetel_Elad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tetel_elad_uj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tetel_elad_uj.Designer.cs">
+      <DependentUpon>Tetel_elad_uj.cs</DependentUpon>
     </Compile>
     <Compile Include="TulajForm.cs">
       <SubType>Form</SubType>
@@ -276,6 +288,9 @@
     <EmbeddedResource Include="Rendeles_adat.resx">
       <DependentUpon>Rendeles_adat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Szerviz_helyben.resx">
+      <DependentUpon>Szerviz_helyben.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Szerviz_Lista.resx">
       <DependentUpon>Szerviz_Lista.cs</DependentUpon>
     </EmbeddedResource>
@@ -293,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tetel_Elad.resx">
       <DependentUpon>Tetel_Elad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tetel_elad_uj.resx">
+      <DependentUpon>Tetel_elad_uj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TulajForm.resx">
       <DependentUpon>TulajForm.cs</DependentUpon>

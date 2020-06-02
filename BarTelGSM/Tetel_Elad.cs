@@ -91,8 +91,8 @@ namespace BarTelGSM
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            Keszlet_keres kk = new Keszlet_keres(this);
-            kk.Show();
+            /*Keszlet_keres kk = new Keszlet_keres(this);
+            kk.Show();*/
         }
     }
 }

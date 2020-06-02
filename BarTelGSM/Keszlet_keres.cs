@@ -6,10 +6,10 @@ namespace BarTelGSM
 {
     public partial class Keszlet_keres : Form
     {
-        Tetel_Elad te;
+        Tetel_elad_uj te;
         MySQL db;
         string[] result = new string[3];
-        public Keszlet_keres(Tetel_Elad _te)
+        public Keszlet_keres(Tetel_elad_uj _te)
         {
             InitializeComponent();
             this.Text = "Termék keresése | Bar-Tel GSM | " + Program.bolt;
@@ -44,7 +44,7 @@ namespace BarTelGSM
         private void dgv_result_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            if(dgv_result.Rows[index].Cells[4].Value.ToString() == Program.bolt)
+            if(dgv_result.Rows[index].Cells[5].Value.ToString() == Program.bolt)
             {
                 if(int.Parse(dgv_result.Rows[index].Cells[4].Value.ToString()) > 0)
                 {
@@ -55,6 +55,7 @@ namespace BarTelGSM
                     te.tb_tetelnev.Text = result[0];
                     te.tb_vonalkod.Text = result[1];
                     te.tb_tetelar.Text = result[2];
+                    te.tb_darab.Text = "1";
 
                     result = new string[3];
 

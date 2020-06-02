@@ -135,7 +135,8 @@ namespace BarTelGSM
             );
             if(dr == DialogResult.Yes)
             { //készül a napi jelentés
-
+                Napi_Jelentes nj = new Napi_Jelentes();
+                nj.Show();
             }
             else if(dr == DialogResult.No)
             { //nem készül napi jelentés
@@ -207,8 +208,11 @@ namespace BarTelGSM
 
         private void tételEladásToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tetel_Elad te = new Tetel_Elad(napi,this,false);
+            /*Tetel_Elad te = new Tetel_Elad(napi,this,false);
+            te.Show();*/
+            Tetel_elad_uj te = new Tetel_elad_uj(napi, this, false);
             te.Show();
+            
         }
 
         private void kPKIToolStripMenuItem_Click(object sender, EventArgs e)
@@ -298,6 +302,18 @@ namespace BarTelGSM
         {
             Keszlet_Lista kl = new Keszlet_Lista(napi, this);
             kl.Show();
+        }
+
+        private void helyszíniSzervízToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Szerviz_helyben szh = new Szerviz_helyben(napi, this);
+            szh.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Napi_Jelentes nj = new Napi_Jelentes();
+            nj.Show();
         }
     }
 }

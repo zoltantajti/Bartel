@@ -47,6 +47,7 @@
             this.selejtezésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boltokKöztiÁtadásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.árváltozásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_new = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_termekek)).BeginInit();
@@ -55,6 +56,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_new);
             this.groupBox1.Controls.Add(this.btn_clear);
             this.groupBox1.Controls.Add(this.cb_hol);
             this.groupBox1.Controls.Add(this.label3);
@@ -187,42 +189,52 @@
             this.boltokKöztiÁtadásToolStripMenuItem,
             this.árváltozásToolStripMenuItem});
             this.rowMenuStrip.Name = "rowMenuStrip";
-            this.rowMenuStrip.Size = new System.Drawing.Size(181, 136);
+            this.rowMenuStrip.Size = new System.Drawing.Size(165, 114);
             // 
             // eladásToolStripMenuItem
             // 
             this.eladásToolStripMenuItem.Name = "eladásToolStripMenuItem";
-            this.eladásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eladásToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.eladásToolStripMenuItem.Text = "Eladás";
             this.eladásToolStripMenuItem.Click += new System.EventHandler(this.eladásToolStripMenuItem_Click);
             // 
             // bevételezésToolStripMenuItem
             // 
             this.bevételezésToolStripMenuItem.Name = "bevételezésToolStripMenuItem";
-            this.bevételezésToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bevételezésToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.bevételezésToolStripMenuItem.Text = "Bevételezés";
             this.bevételezésToolStripMenuItem.Click += new System.EventHandler(this.bevételezésToolStripMenuItem_Click);
             // 
             // selejtezésToolStripMenuItem
             // 
             this.selejtezésToolStripMenuItem.Name = "selejtezésToolStripMenuItem";
-            this.selejtezésToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.selejtezésToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.selejtezésToolStripMenuItem.Text = "Selejtezés";
             this.selejtezésToolStripMenuItem.Click += new System.EventHandler(this.selejtezésToolStripMenuItem_Click);
             // 
             // boltokKöztiÁtadásToolStripMenuItem
             // 
             this.boltokKöztiÁtadásToolStripMenuItem.Name = "boltokKöztiÁtadásToolStripMenuItem";
-            this.boltokKöztiÁtadásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.boltokKöztiÁtadásToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.boltokKöztiÁtadásToolStripMenuItem.Text = "Boltok közti átadás";
             this.boltokKöztiÁtadásToolStripMenuItem.Click += new System.EventHandler(this.boltokKöztiÁtadásToolStripMenuItem_Click);
             // 
             // árváltozásToolStripMenuItem
             // 
             this.árváltozásToolStripMenuItem.Name = "árváltozásToolStripMenuItem";
-            this.árváltozásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.árváltozásToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.árváltozásToolStripMenuItem.Text = "Árváltozás";
             this.árváltozásToolStripMenuItem.Click += new System.EventHandler(this.árváltozásToolStripMenuItem_Click);
+            // 
+            // btn_new
+            // 
+            this.btn_new.Location = new System.Drawing.Point(610, 33);
+            this.btn_new.Name = "btn_new";
+            this.btn_new.Size = new System.Drawing.Size(75, 23);
+            this.btn_new.TabIndex = 8;
+            this.btn_new.Text = "Új termék";
+            this.btn_new.UseVisualStyleBackColor = true;
+            this.btn_new.Click += new System.EventHandler(this.btn_new_Click);
             // 
             // Keszlet_Lista
             // 
@@ -262,5 +274,6 @@
         private System.Windows.Forms.ToolStripMenuItem boltokKöztiÁtadásToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem árváltozásToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bevételezésToolStripMenuItem;
+        private System.Windows.Forms.Button btn_new;
     }
 }

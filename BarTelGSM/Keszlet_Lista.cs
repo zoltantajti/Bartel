@@ -144,5 +144,11 @@ namespace BarTelGSM
             Termek_arvaltozas ta = new Termek_arvaltozas(name,ean,ar);
             ta.Show();
         }
+
+        private void btn_new_Click(object sender, EventArgs e)
+        {
+            Keszlet_bevetelezes kb = new Keszlet_bevetelezes();
+            kb.Show();
+        }
     }
 };

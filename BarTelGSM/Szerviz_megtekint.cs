@@ -77,6 +77,8 @@ namespace BarTelGSM
                     string cond = "WHERE id='" + id + "'";
                     db.update("szerviz", values, cond);
                     fizet();
+                    n.napiFrissit();
+                    mf.statFrissit();
                 }
                 else
                 {

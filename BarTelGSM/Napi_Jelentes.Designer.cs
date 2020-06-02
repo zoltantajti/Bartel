@@ -46,8 +46,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_nyito_kassza = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gb_fncs = new System.Windows.Forms.GroupBox();
             this.btn_export_Excel = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_bolt = new System.Windows.Forms.Label();
+            this.p_loading = new System.Windows.Forms.Panel();
+            this.lbl_process = new System.Windows.Forms.Label();
             this.gb_tEald.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tetel)).BeginInit();
             this.gb_telVetel.SuspendLayout();
@@ -59,15 +67,20 @@
             this.gb_kpki.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_kpki)).BeginInit();
             this.gb_sum.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gb_fncs.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_tEald
             // 
             this.gb_tEald.Controls.Add(this.dgv_tetel);
-            this.gb_tEald.Location = new System.Drawing.Point(12, 24);
+            this.gb_tEald.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gb_tEald.Location = new System.Drawing.Point(0, 0);
             this.gb_tEald.Name = "gb_tEald";
-            this.gb_tEald.Size = new System.Drawing.Size(244, 350);
+            this.gb_tEald.Size = new System.Drawing.Size(256, 375);
             this.gb_tEald.TabIndex = 0;
             this.gb_tEald.TabStop = false;
             this.gb_tEald.Text = "Termék eladás:";
@@ -92,13 +105,13 @@
             this.dgv_tetel.ShowCellToolTips = false;
             this.dgv_tetel.ShowEditingIcon = false;
             this.dgv_tetel.ShowRowErrors = false;
-            this.dgv_tetel.Size = new System.Drawing.Size(238, 331);
+            this.dgv_tetel.Size = new System.Drawing.Size(250, 356);
             this.dgv_tetel.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 8);
+            this.label1.Location = new System.Drawing.Point(3, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 1;
@@ -107,7 +120,7 @@
             // lbl_datum
             // 
             this.lbl_datum.AutoSize = true;
-            this.lbl_datum.Location = new System.Drawing.Point(78, 8);
+            this.lbl_datum.Location = new System.Drawing.Point(68, 6);
             this.lbl_datum.Name = "lbl_datum";
             this.lbl_datum.Size = new System.Drawing.Size(44, 13);
             this.lbl_datum.TabIndex = 2;
@@ -116,9 +129,10 @@
             // gb_telVetel
             // 
             this.gb_telVetel.Controls.Add(this.dgv_tel_vetel);
-            this.gb_telVetel.Location = new System.Drawing.Point(262, 24);
+            this.gb_telVetel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gb_telVetel.Location = new System.Drawing.Point(0, 0);
             this.gb_telVetel.Name = "gb_telVetel";
-            this.gb_telVetel.Size = new System.Drawing.Size(207, 93);
+            this.gb_telVetel.Size = new System.Drawing.Size(239, 190);
             this.gb_telVetel.TabIndex = 1;
             this.gb_telVetel.TabStop = false;
             this.gb_telVetel.Text = "Telefon vétel:";
@@ -143,15 +157,16 @@
             this.dgv_tel_vetel.ShowCellToolTips = false;
             this.dgv_tel_vetel.ShowEditingIcon = false;
             this.dgv_tel_vetel.ShowRowErrors = false;
-            this.dgv_tel_vetel.Size = new System.Drawing.Size(201, 74);
+            this.dgv_tel_vetel.Size = new System.Drawing.Size(233, 171);
             this.dgv_tel_vetel.TabIndex = 3;
             // 
             // gb_tel_elad
             // 
             this.gb_tel_elad.Controls.Add(this.dgv_telElad);
-            this.gb_tel_elad.Location = new System.Drawing.Point(475, 24);
+            this.gb_tel_elad.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gb_tel_elad.Location = new System.Drawing.Point(0, 209);
             this.gb_tel_elad.Name = "gb_tel_elad";
-            this.gb_tel_elad.Size = new System.Drawing.Size(207, 90);
+            this.gb_tel_elad.Size = new System.Drawing.Size(239, 166);
             this.gb_tel_elad.TabIndex = 2;
             this.gb_tel_elad.TabStop = false;
             this.gb_tel_elad.Text = "Telefon eladás:";
@@ -176,15 +191,16 @@
             this.dgv_telElad.ShowCellToolTips = false;
             this.dgv_telElad.ShowEditingIcon = false;
             this.dgv_telElad.ShowRowErrors = false;
-            this.dgv_telElad.Size = new System.Drawing.Size(201, 71);
+            this.dgv_telElad.Size = new System.Drawing.Size(233, 147);
             this.dgv_telElad.TabIndex = 4;
             // 
             // gb_szerviz
             // 
             this.gb_szerviz.Controls.Add(this.dgv_szerviz);
-            this.gb_szerviz.Location = new System.Drawing.Point(262, 123);
+            this.gb_szerviz.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gb_szerviz.Location = new System.Drawing.Point(0, 0);
             this.gb_szerviz.Name = "gb_szerviz";
-            this.gb_szerviz.Size = new System.Drawing.Size(207, 91);
+            this.gb_szerviz.Size = new System.Drawing.Size(237, 115);
             this.gb_szerviz.TabIndex = 2;
             this.gb_szerviz.TabStop = false;
             this.gb_szerviz.Text = "Szervíz:";
@@ -209,15 +225,16 @@
             this.dgv_szerviz.ShowCellToolTips = false;
             this.dgv_szerviz.ShowEditingIcon = false;
             this.dgv_szerviz.ShowRowErrors = false;
-            this.dgv_szerviz.Size = new System.Drawing.Size(201, 72);
+            this.dgv_szerviz.Size = new System.Drawing.Size(231, 96);
             this.dgv_szerviz.TabIndex = 2;
             // 
             // gb_kpki
             // 
             this.gb_kpki.Controls.Add(this.dgv_kpki);
-            this.gb_kpki.Location = new System.Drawing.Point(262, 220);
+            this.gb_kpki.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gb_kpki.Location = new System.Drawing.Point(0, 131);
             this.gb_kpki.Name = "gb_kpki";
-            this.gb_kpki.Size = new System.Drawing.Size(207, 154);
+            this.gb_kpki.Size = new System.Drawing.Size(237, 109);
             this.gb_kpki.TabIndex = 3;
             this.gb_kpki.TabStop = false;
             this.gb_kpki.Text = "KP KI:";
@@ -242,7 +259,7 @@
             this.dgv_kpki.ShowCellToolTips = false;
             this.dgv_kpki.ShowEditingIcon = false;
             this.dgv_kpki.ShowRowErrors = false;
-            this.dgv_kpki.Size = new System.Drawing.Size(201, 135);
+            this.dgv_kpki.Size = new System.Drawing.Size(231, 90);
             this.dgv_kpki.TabIndex = 1;
             // 
             // gb_sum
@@ -251,9 +268,10 @@
             this.gb_sum.Controls.Add(this.label3);
             this.gb_sum.Controls.Add(this.lbl_nyito_kassza);
             this.gb_sum.Controls.Add(this.label6);
-            this.gb_sum.Location = new System.Drawing.Point(475, 123);
+            this.gb_sum.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gb_sum.Location = new System.Drawing.Point(0, 240);
             this.gb_sum.Name = "gb_sum";
-            this.gb_sum.Size = new System.Drawing.Size(207, 197);
+            this.gb_sum.Size = new System.Drawing.Size(237, 87);
             this.gb_sum.TabIndex = 4;
             this.gb_sum.TabStop = false;
             this.gb_sum.Text = "Összesítés:";
@@ -294,15 +312,16 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Nyitó kassza:";
             // 
-            // groupBox1
+            // gb_fncs
             // 
-            this.groupBox1.Controls.Add(this.btn_export_Excel);
-            this.groupBox1.Location = new System.Drawing.Point(475, 326);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(207, 48);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Funkciók:";
+            this.gb_fncs.Controls.Add(this.btn_export_Excel);
+            this.gb_fncs.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gb_fncs.Location = new System.Drawing.Point(0, 327);
+            this.gb_fncs.Name = "gb_fncs";
+            this.gb_fncs.Size = new System.Drawing.Size(237, 48);
+            this.gb_fncs.TabIndex = 3;
+            this.gb_fncs.TabStop = false;
+            this.gb_fncs.Text = "Funkciók:";
             // 
             // btn_export_Excel
             // 
@@ -315,24 +334,95 @@
             this.btn_export_Excel.UseVisualStyleBackColor = true;
             this.btn_export_Excel.Click += new System.EventHandler(this.btn_export_Excel_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbl_process);
+            this.panel1.Controls.Add(this.lbl_bolt);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbl_datum);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(733, 24);
+            this.panel1.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.gb_tEald);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 24);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(256, 375);
+            this.panel2.TabIndex = 6;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.gb_telVetel);
+            this.panel3.Controls.Add(this.gb_tel_elad);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(256, 24);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(239, 375);
+            this.panel3.TabIndex = 7;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.gb_szerviz);
+            this.panel4.Controls.Add(this.gb_kpki);
+            this.panel4.Controls.Add(this.gb_sum);
+            this.panel4.Controls.Add(this.gb_fncs);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(496, 24);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(237, 375);
+            this.panel4.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(346, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Bolt:";
+            // 
+            // lbl_bolt
+            // 
+            this.lbl_bolt.AutoSize = true;
+            this.lbl_bolt.Location = new System.Drawing.Point(380, 6);
+            this.lbl_bolt.Name = "lbl_bolt";
+            this.lbl_bolt.Size = new System.Drawing.Size(32, 13);
+            this.lbl_bolt.TabIndex = 4;
+            this.lbl_bolt.Text = "{bolt}";
+            // 
+            // p_loading
+            // 
+            this.p_loading.Location = new System.Drawing.Point(441, 24);
+            this.p_loading.Name = "p_loading";
+            this.p_loading.Size = new System.Drawing.Size(260, 240);
+            this.p_loading.TabIndex = 9;
+            // 
+            // lbl_process
+            // 
+            this.lbl_process.AutoSize = true;
+            this.lbl_process.Location = new System.Drawing.Point(613, 6);
+            this.lbl_process.Name = "lbl_process";
+            this.lbl_process.Size = new System.Drawing.Size(108, 13);
+            this.lbl_process.TabIndex = 0;
+            this.lbl_process.Text = "Betöltés folyamatban!";
+            // 
             // Napi_Jelentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 386);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.gb_sum);
-            this.Controls.Add(this.gb_kpki);
-            this.Controls.Add(this.gb_szerviz);
-            this.Controls.Add(this.gb_tel_elad);
-            this.Controls.Add(this.gb_telVetel);
-            this.Controls.Add(this.lbl_datum);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.gb_tEald);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(733, 399);
+            this.Controls.Add(this.p_loading);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Napi_Jelentes";
             this.Text = "Napi_Jelentes";
             this.gb_tEald.ResumeLayout(false);
@@ -347,9 +437,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_kpki)).EndInit();
             this.gb_sum.ResumeLayout(false);
             this.gb_sum.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.gb_fncs.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -363,7 +457,7 @@
         private System.Windows.Forms.GroupBox gb_szerviz;
         private System.Windows.Forms.GroupBox gb_kpki;
         private System.Windows.Forms.GroupBox gb_sum;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gb_fncs;
         private System.Windows.Forms.Button btn_export_Excel;
         private System.Windows.Forms.DataGridView dgv_tetel;
         private System.Windows.Forms.DataGridView dgv_kpki;
@@ -374,5 +468,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbl_kassza_ft;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lbl_bolt;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel p_loading;
+        private System.Windows.Forms.Label lbl_process;
     }
 }
