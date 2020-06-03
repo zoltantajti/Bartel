@@ -38,6 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
             this.btn_showAll = new System.Windows.Forms.Button();
+            this.cb_showAll = new System.Windows.Forms.CheckBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_szervizek)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +51,6 @@
             this.dgv_szervizek.AllowUserToResizeRows = false;
             this.dgv_szervizek.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_szervizek.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_szervizek.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_szervizek.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dgv_szervizek.Location = new System.Drawing.Point(0, 55);
             this.dgv_szervizek.MultiSelect = false;
@@ -59,7 +60,7 @@
             this.dgv_szervizek.ShowCellToolTips = false;
             this.dgv_szervizek.ShowEditingIcon = false;
             this.dgv_szervizek.ShowRowErrors = false;
-            this.dgv_szervizek.Size = new System.Drawing.Size(736, 232);
+            this.dgv_szervizek.Size = new System.Drawing.Size(783, 301);
             this.dgv_szervizek.TabIndex = 0;
             this.dgv_szervizek.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_szervizek_CellContentDoubleClick);
             // 
@@ -113,7 +114,7 @@
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(357, 18);
+            this.btn_search.Location = new System.Drawing.Point(357, 17);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(75, 23);
             this.btn_search.TabIndex = 7;
@@ -123,7 +124,7 @@
             // 
             // btn_showAll
             // 
-            this.btn_showAll.Location = new System.Drawing.Point(438, 18);
+            this.btn_showAll.Location = new System.Drawing.Point(438, 17);
             this.btn_showAll.Name = "btn_showAll";
             this.btn_showAll.Size = new System.Drawing.Size(84, 23);
             this.btn_showAll.TabIndex = 8;
@@ -131,11 +132,32 @@
             this.btn_showAll.UseVisualStyleBackColor = true;
             this.btn_showAll.Click += new System.EventHandler(this.btn_showAll_Click);
             // 
+            // cb_showAll
+            // 
+            this.cb_showAll.AutoSize = true;
+            this.cb_showAll.Location = new System.Drawing.Point(1, 362);
+            this.cb_showAll.Name = "cb_showAll";
+            this.cb_showAll.Size = new System.Drawing.Size(139, 17);
+            this.cb_showAll.TabIndex = 9;
+            this.cb_showAll.Text = "Mutasd a kiadottakat is!";
+            this.cb_showAll.UseVisualStyleBackColor = true;
+            this.cb_showAll.CheckedChanged += new System.EventHandler(this.cb_showAll_CheckedChanged);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 359);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(783, 22);
+            this.statusStrip1.TabIndex = 10;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // Szerviz_Lista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 287);
+            this.ClientSize = new System.Drawing.Size(783, 381);
+            this.Controls.Add(this.cb_showAll);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btn_showAll);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.tb_telszam);
@@ -168,5 +190,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Button btn_showAll;
+        private System.Windows.Forms.CheckBox cb_showAll;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }

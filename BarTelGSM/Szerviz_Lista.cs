@@ -10,6 +10,7 @@ namespace BarTelGSM
         MySQL db;
         Napi n;
         MainForm mf;
+        string feltetel = "";
         public Szerviz_Lista(Napi _n, MainForm _mf)
         {
             InitializeComponent();
@@ -19,9 +20,18 @@ namespace BarTelGSM
             mf = _mf;
             init();
         }
-        public void init(string feltetel = "")
+        public void init(string f = "")
         {
-            string cond = "WHERE bolt='" + Program.bolt + "' " + feltetel;
+            string filter = "";
+            if (cb_showAll.Checked == false)
+            {
+                filter = " AND status != 'Fizetve'";
+            }
+            else
+            {
+                filter = " AND (status != 'Fizetve' OR status = 'Fizetve')";
+            }
+            string cond = "WHERE bolt='" + Program.bolt + "' " + this.feltetel + filter + " ORDER BY nap DESC";
             dgv_szervizek.DataSource = db.getDT(
                 "szerviz", 
                 "id,nap,tipus,tulaj,telszam,status", 
@@ -49,12 +59,12 @@ namespace BarTelGSM
             tb_telszam.Text = "";
             tb_tipus.Text = "";
             btn_showAll.Visible = false;
+            this.feltetel = "";
             init();
         }
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            string feltetel = "";
             if(tb_nev.Text.Length > 0)
             {
                 feltetel += " AND tulaj LIKE '%" + tb_nev.Text + "%'";
@@ -68,7 +78,12 @@ namespace BarTelGSM
                 feltetel += " AND tipus LIKE '%" + tb_tipus.Text + "%'";
             };
             btn_showAll.Visible = true;
-            init(feltetel);
+            init();
+        }
+
+        private void cb_showAll_CheckedChanged(object sender, EventArgs e)
+        {
+            init();
         }
     }
 }

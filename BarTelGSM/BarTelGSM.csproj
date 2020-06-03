@@ -239,6 +239,7 @@
     <Compile Include="Uj_szerviz.Designer.cs">
       <DependentUpon>Uj_szerviz.cs</DependentUpon>
     </Compile>
+    <Compile Include="Updates.cs" />
     <EmbeddedResource Include="Felhasznalok.resx">
       <DependentUpon>Felhasznalok.cs</DependentUpon>
     </EmbeddedResource>

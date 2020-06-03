@@ -8,9 +8,15 @@ namespace BarTelGSM
     public partial class LoginForm : Form
     {
         MySQL db;
+        Updates upd;
+
         public LoginForm()
         {
             InitializeComponent();
+
+            upd = new Updates();
+            bool hasUpdate = upd.checkUpdates();
+
             db = new MySQL();
             cb_bolt.Items.Add(Boltok.Nagybolt);
             cb_bolt.Items.Add(Boltok.Kisbolt);

@@ -12,6 +12,7 @@ namespace BarTelGSM
         public static string bolt { get; set; }
         public static string[] user { get; set; }
         public static bool login { get; set; }
+        public static string version = "0,90";
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
