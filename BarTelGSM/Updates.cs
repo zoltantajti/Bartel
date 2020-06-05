@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using libsql;
@@ -30,7 +33,11 @@ namespace BarTelGSM
                 );
                 if(update == DialogResult.Yes)
                 {
-                    //Futtassa az updatert
+                    Process.Start(Directory.GetCurrentDirectory() + "\\Updater.exe");
+                    Thread.Sleep(1000);
+                    Application.Exit();
+                    Application.ExitThread();
+                    Environment.Exit(1);
                 };
             }
 

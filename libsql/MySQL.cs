@@ -327,5 +327,71 @@ namespace libsql
             }
             return ret;
         }
+        public List<string> getTelEladToList(string table, string mit = "*", string cond = "")
+        {
+            List<string> ret = new List<string>();
+            string q = "SELECT " + mit + " FROM `" + table + "` " + cond;
+            if (this.open() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(q, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    var count = reader.FieldCount;
+                    while (reader.Read())
+                    {
+                        string tetel = reader.GetString("tipus");
+                        string ar = reader.GetString("teny_elad_ar");
+                        string row = tetel + ";" + ar;
+                        ret.Add(row);
+                    }
+                }
+            }
+            return ret;
+        }
+        public List<string> getSzervizToList(string table, string mit = "*", string cond = "")
+        {
+            List<string> ret = new List<string>();
+            string q = "SELECT " + mit + " FROM `" + table + "` " + cond;
+            if (this.open() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(q, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    var count = reader.FieldCount;
+                    while (reader.Read())
+                    {
+                        string tetel = reader.GetString("tipus");
+                        string ar = reader.GetString("ar");
+                        string row = tetel + ";" + ar;
+                        ret.Add(row);
+                    }
+                }
+            }
+            return ret;
+        }
+        public List<string> getKPKIToList(string table, string mit = "*", string cond = "")
+        {
+            List<string> ret = new List<string>();
+            string q = "SELECT " + mit + " FROM `" + table + "` " + cond;
+            if (this.open() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(q, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    var count = reader.FieldCount;
+                    while (reader.Read())
+                    {
+                        string tetel = reader.GetString("ki");
+                        string ar = reader.GetString("mennyi");
+                        string row = tetel + ";" + ar;
+                        ret.Add(row);
+                    }
+                }
+            }
+            return ret;
+        }
     }
 }

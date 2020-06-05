@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tetel_elad_uj));
             this.label1 = new System.Windows.Forms.Label();
             this.tb_tetelnev = new System.Windows.Forms.TextBox();
             this.tb_vonalkod = new System.Windows.Forms.TextBox();
@@ -47,7 +49,12 @@
             this.btn_keres = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.lbl_vegosszeg = new System.Windows.Forms.Label();
+            this.cms_termek = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.eltávolításToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.módosításToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mégseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lista)).BeginInit();
+            this.cms_termek.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -149,6 +156,7 @@
             this.dgv_lista.ShowRowErrors = false;
             this.dgv_lista.Size = new System.Drawing.Size(571, 269);
             this.dgv_lista.TabIndex = 9;
+            this.dgv_lista.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_lista_CellMouseDown);
             // 
             // name
             // 
@@ -218,6 +226,36 @@
             this.lbl_vegosszeg.TabIndex = 13;
             this.lbl_vegosszeg.Text = "0 Ft";
             // 
+            // cms_termek
+            // 
+            this.cms_termek.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eltávolításToolStripMenuItem,
+            this.módosításToolStripMenuItem,
+            this.mégseToolStripMenuItem});
+            this.cms_termek.Name = "cms_termek";
+            this.cms_termek.Size = new System.Drawing.Size(124, 70);
+            // 
+            // eltávolításToolStripMenuItem
+            // 
+            this.eltávolításToolStripMenuItem.Name = "eltávolításToolStripMenuItem";
+            this.eltávolításToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.eltávolításToolStripMenuItem.Text = "Eltávolítás";
+            this.eltávolításToolStripMenuItem.Click += new System.EventHandler(this.eltávolításToolStripMenuItem_Click);
+            // 
+            // módosításToolStripMenuItem
+            // 
+            this.módosításToolStripMenuItem.Name = "módosításToolStripMenuItem";
+            this.módosításToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.módosításToolStripMenuItem.Text = "Módosítás";
+            this.módosításToolStripMenuItem.Click += new System.EventHandler(this.módosításToolStripMenuItem_Click);
+            // 
+            // mégseToolStripMenuItem
+            // 
+            this.mégseToolStripMenuItem.Name = "mégseToolStripMenuItem";
+            this.mégseToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.mégseToolStripMenuItem.Text = "Mégse";
+            this.mégseToolStripMenuItem.Click += new System.EventHandler(this.mégseToolStripMenuItem_Click);
+            // 
             // Tetel_elad_uj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,9 +275,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tb_tetelnev);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Tetel_elad_uj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tetel_elad_uj";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_lista)).EndInit();
+            this.cms_termek.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,5 +307,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn darab;
         private System.Windows.Forms.DataGridViewTextBoxColumn ar;
+        private System.Windows.Forms.ContextMenuStrip cms_termek;
+        private System.Windows.Forms.ToolStripMenuItem eltávolításToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem módosításToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mégseToolStripMenuItem;
     }
 }

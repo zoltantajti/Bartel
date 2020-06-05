@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,18 +13,30 @@ namespace BarTelGSM
         public static string bolt { get; set; }
         public static string[] user { get; set; }
         public static bool login { get; set; }
-        public static string version = "0,90";
+        public static string version;
+        public static string path;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
+            CollectVersion();
             RunLogin();
         }
         public static void Logout()
         {
             RunLogin();
+        }
+        static void CollectVersion()
+        {
+            using (RegistryKey rk = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Wow6432Node\\BarTelGSM"))
+            {
+                Object ver = rk.GetValue("version");
+                Object p = rk.GetValue("path");
+                version = ver.ToString();
+                path = p.ToString();
+            }
         }
         static void RunLogin()
         {
