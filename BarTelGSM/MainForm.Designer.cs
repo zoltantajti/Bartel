@@ -41,6 +41,7 @@
             this.telefonVételToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kPKIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.szervizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helyszíniSzervízToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.újSzervízToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.szervízListaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.termékekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,7 +89,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tb_nyitokassza = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.helyszíniSzervízToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.ms_menu.SuspendLayout();
             this.ss_lablec.SuspendLayout();
@@ -147,14 +147,14 @@
             // tételEladásToolStripMenuItem
             // 
             this.tételEladásToolStripMenuItem.Name = "tételEladásToolStripMenuItem";
-            this.tételEladásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tételEladásToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.tételEladásToolStripMenuItem.Text = "Tétel eladás";
             this.tételEladásToolStripMenuItem.Click += new System.EventHandler(this.tételEladásToolStripMenuItem_Click);
             // 
             // telefonEladásToolStripMenuItem
             // 
             this.telefonEladásToolStripMenuItem.Name = "telefonEladásToolStripMenuItem";
-            this.telefonEladásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.telefonEladásToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.telefonEladásToolStripMenuItem.Text = "Telefon eladás";
             this.telefonEladásToolStripMenuItem.Click += new System.EventHandler(this.telefonEladásToolStripMenuItem_Click);
             // 
@@ -190,17 +190,24 @@
             this.szervizToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.szervizToolStripMenuItem.Text = "Szervíz";
             // 
+            // helyszíniSzervízToolStripMenuItem
+            // 
+            this.helyszíniSzervízToolStripMenuItem.Name = "helyszíniSzervízToolStripMenuItem";
+            this.helyszíniSzervízToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.helyszíniSzervízToolStripMenuItem.Text = "Helyszíni szervíz";
+            this.helyszíniSzervízToolStripMenuItem.Click += new System.EventHandler(this.helyszíniSzervízToolStripMenuItem_Click);
+            // 
             // újSzervízToolStripMenuItem
             // 
             this.újSzervízToolStripMenuItem.Name = "újSzervízToolStripMenuItem";
-            this.újSzervízToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.újSzervízToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.újSzervízToolStripMenuItem.Text = "Új szervíz";
             this.újSzervízToolStripMenuItem.Click += new System.EventHandler(this.újSzervízToolStripMenuItem_Click);
             // 
             // szervízListaToolStripMenuItem
             // 
             this.szervízListaToolStripMenuItem.Name = "szervízListaToolStripMenuItem";
-            this.szervízListaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.szervízListaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.szervízListaToolStripMenuItem.Text = "Szervíz lista";
             this.szervízListaToolStripMenuItem.Click += new System.EventHandler(this.szervízListaToolStripMenuItem_Click);
             // 
@@ -602,13 +609,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Nyitó kassza:";
             // 
-            // helyszíniSzervízToolStripMenuItem
-            // 
-            this.helyszíniSzervízToolStripMenuItem.Name = "helyszíniSzervízToolStripMenuItem";
-            this.helyszíniSzervízToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.helyszíniSzervízToolStripMenuItem.Text = "Helyszíni szervíz";
-            this.helyszíniSzervízToolStripMenuItem.Click += new System.EventHandler(this.helyszíniSzervízToolStripMenuItem_Click);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(375, 28);
@@ -635,7 +635,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bar-Tel GSM";

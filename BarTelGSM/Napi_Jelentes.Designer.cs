@@ -157,9 +157,9 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.57534F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.42466F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 222F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Controls.Add(this.p_frame_left, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.p_frame_center, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.p_frame_right, 2, 0);
@@ -167,8 +167,7 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 24);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(733, 375);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
@@ -178,7 +177,7 @@
             this.p_frame_left.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p_frame_left.Location = new System.Drawing.Point(3, 3);
             this.p_frame_left.Name = "p_frame_left";
-            this.p_frame_left.Size = new System.Drawing.Size(231, 369);
+            this.p_frame_left.Size = new System.Drawing.Size(238, 369);
             this.p_frame_left.TabIndex = 0;
             // 
             // gb_tEald
@@ -187,7 +186,7 @@
             this.gb_tEald.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gb_tEald.Location = new System.Drawing.Point(0, 0);
             this.gb_tEald.Name = "gb_tEald";
-            this.gb_tEald.Size = new System.Drawing.Size(231, 369);
+            this.gb_tEald.Size = new System.Drawing.Size(238, 369);
             this.gb_tEald.TabIndex = 0;
             this.gb_tEald.TabStop = false;
             this.gb_tEald.Text = "Tétel eladás:";
@@ -204,16 +203,16 @@
             this.dgv_tetel.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_tetel.Location = new System.Drawing.Point(3, 16);
             this.dgv_tetel.Name = "dgv_tetel";
-            this.dgv_tetel.Size = new System.Drawing.Size(225, 350);
+            this.dgv_tetel.Size = new System.Drawing.Size(232, 350);
             this.dgv_tetel.TabIndex = 3;
             // 
             // p_frame_center
             // 
             this.p_frame_center.Controls.Add(this.tableLayoutPanel2);
             this.p_frame_center.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.p_frame_center.Location = new System.Drawing.Point(240, 3);
+            this.p_frame_center.Location = new System.Drawing.Point(247, 3);
             this.p_frame_center.Name = "p_frame_center";
-            this.p_frame_center.Size = new System.Drawing.Size(267, 369);
+            this.p_frame_center.Size = new System.Drawing.Size(238, 369);
             this.p_frame_center.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -230,7 +229,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(267, 369);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(238, 369);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // gb_telVetel
@@ -239,7 +238,7 @@
             this.gb_telVetel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gb_telVetel.Location = new System.Drawing.Point(3, 3);
             this.gb_telVetel.Name = "gb_telVetel";
-            this.gb_telVetel.Size = new System.Drawing.Size(261, 178);
+            this.gb_telVetel.Size = new System.Drawing.Size(232, 178);
             this.gb_telVetel.TabIndex = 0;
             this.gb_telVetel.TabStop = false;
             this.gb_telVetel.Text = "Telefon vétel:";
@@ -256,7 +255,7 @@
             this.dgv_tel_vetel.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_tel_vetel.Location = new System.Drawing.Point(3, 16);
             this.dgv_tel_vetel.Name = "dgv_tel_vetel";
-            this.dgv_tel_vetel.Size = new System.Drawing.Size(255, 159);
+            this.dgv_tel_vetel.Size = new System.Drawing.Size(226, 159);
             this.dgv_tel_vetel.TabIndex = 3;
             // 
             // gb_tel_elad
@@ -265,7 +264,7 @@
             this.gb_tel_elad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gb_tel_elad.Location = new System.Drawing.Point(3, 187);
             this.gb_tel_elad.Name = "gb_tel_elad";
-            this.gb_tel_elad.Size = new System.Drawing.Size(261, 179);
+            this.gb_tel_elad.Size = new System.Drawing.Size(232, 179);
             this.gb_tel_elad.TabIndex = 1;
             this.gb_tel_elad.TabStop = false;
             this.gb_tel_elad.Text = "Telefon eladás:";
@@ -282,16 +281,16 @@
             this.dgv_telElad.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_telElad.Location = new System.Drawing.Point(3, 16);
             this.dgv_telElad.Name = "dgv_telElad";
-            this.dgv_telElad.Size = new System.Drawing.Size(255, 160);
+            this.dgv_telElad.Size = new System.Drawing.Size(226, 160);
             this.dgv_telElad.TabIndex = 2;
             // 
             // p_frame_right
             // 
             this.p_frame_right.Controls.Add(this.tableLayoutPanel3);
             this.p_frame_right.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.p_frame_right.Location = new System.Drawing.Point(513, 3);
+            this.p_frame_right.Location = new System.Drawing.Point(491, 3);
             this.p_frame_right.Name = "p_frame_right";
-            this.p_frame_right.Size = new System.Drawing.Size(217, 369);
+            this.p_frame_right.Size = new System.Drawing.Size(239, 369);
             this.p_frame_right.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -311,7 +310,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.49052F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(217, 369);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(239, 369);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // gb_kpki
@@ -320,7 +319,7 @@
             this.gb_kpki.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gb_kpki.Location = new System.Drawing.Point(3, 3);
             this.gb_kpki.Name = "gb_kpki";
-            this.gb_kpki.Size = new System.Drawing.Size(211, 108);
+            this.gb_kpki.Size = new System.Drawing.Size(233, 108);
             this.gb_kpki.TabIndex = 0;
             this.gb_kpki.TabStop = false;
             this.gb_kpki.Text = "KP KI:";
@@ -337,7 +336,7 @@
             this.dgv_kpki.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_kpki.Location = new System.Drawing.Point(3, 16);
             this.dgv_kpki.Name = "dgv_kpki";
-            this.dgv_kpki.Size = new System.Drawing.Size(205, 89);
+            this.dgv_kpki.Size = new System.Drawing.Size(227, 89);
             this.dgv_kpki.TabIndex = 0;
             // 
             // gb_szerviz
@@ -346,7 +345,7 @@
             this.gb_szerviz.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gb_szerviz.Location = new System.Drawing.Point(3, 117);
             this.gb_szerviz.Name = "gb_szerviz";
-            this.gb_szerviz.Size = new System.Drawing.Size(211, 115);
+            this.gb_szerviz.Size = new System.Drawing.Size(233, 115);
             this.gb_szerviz.TabIndex = 1;
             this.gb_szerviz.TabStop = false;
             this.gb_szerviz.Text = "Szervíz";
@@ -363,7 +362,7 @@
             this.dgv_szerviz.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_szerviz.Location = new System.Drawing.Point(3, 16);
             this.dgv_szerviz.Name = "dgv_szerviz";
-            this.dgv_szerviz.Size = new System.Drawing.Size(205, 96);
+            this.dgv_szerviz.Size = new System.Drawing.Size(227, 96);
             this.dgv_szerviz.TabIndex = 1;
             // 
             // gb_sum
@@ -375,7 +374,7 @@
             this.gb_sum.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gb_sum.Location = new System.Drawing.Point(3, 238);
             this.gb_sum.Name = "gb_sum";
-            this.gb_sum.Size = new System.Drawing.Size(211, 74);
+            this.gb_sum.Size = new System.Drawing.Size(233, 74);
             this.gb_sum.TabIndex = 2;
             this.gb_sum.TabStop = false;
             this.gb_sum.Text = "Összesítő:";
@@ -424,7 +423,7 @@
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Location = new System.Drawing.Point(3, 318);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(211, 48);
+            this.groupBox6.Size = new System.Drawing.Size(233, 48);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Funkciók";
