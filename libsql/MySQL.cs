@@ -12,10 +12,10 @@ namespace libsql
 {
     public class MySQL
     {
-        private string host = "s1.clanweb.hu";
-        private string user = "ztajti";
-        private string pass = "Kyocera13";
-        private string db = "Bartel";
+        private string host = "**censored**";
+        private string user = "**censored**";
+        private string pass = "**censored**";
+        private string db = "**censored**";
         private MySqlConnection conn;
 
         public bool open()
